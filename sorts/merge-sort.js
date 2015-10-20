@@ -15,7 +15,7 @@ var merge = function (arr1, arr2) {
   var merged = [];
 
   while (arr1.length !== 0 && arr2.length !== 0) {
-    if (arr1[0] < arr2[0]) {
+    if (arr1[0] <= arr2[0]) {
       merged.push(arr1.shift());
     } else {
       merged.push(arr2.shift());
@@ -24,5 +24,3 @@ var merge = function (arr1, arr2) {
 
   return merged.concat(arr1).concat(arr2);
 };
-
-mergeSort([1,2,3,1.5,1]);
