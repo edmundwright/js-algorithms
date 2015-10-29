@@ -82,7 +82,7 @@ LinkedList.prototype.valueAtIndex = function (index) {
 LinkedList.prototype.removeAtIndex = function (index) {
   if (index === 0) { this.shift(); }
 
-  var priorItem = this.itemAtIndex(index - 1);
+  var priorItem = this._itemAtIndex(index - 1);
   if (priorItem.next) {
     priorItem.next = priorItem.next.next;
     priorItem.next.prev = priorItem;
@@ -94,7 +94,7 @@ LinkedList.prototype.removeAtIndex = function (index) {
 LinkedList.prototype.insertAtIndex = function (index, newValue) {
   if (index === 0) { this.unshift(newValue); }
 
-  var priorItem = this.itemAtIndex(index - 1);
+  var priorItem = this._itemAtIndex(index - 1);
   if (priorItem === this.lastItem) {
     this.push(newValue);
   } else {
