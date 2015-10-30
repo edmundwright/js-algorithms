@@ -1,10 +1,11 @@
 # Sorts
 
-|                               | Time best case | Time worst case | Time average case | Memory | Stable? | In place? |
-|-------------------------------|----------------|-----------------|-------------------|--------|---------|-----------|
-|[Merge sort](./merge-sort.js)  | `O(nlog(n))`   | `O(nlog(n))`    | `O(nlog(n))`      | `O(n)` | Yes     | No        |
-|[Bubble sort](./bubble-sort.js)| `O(n)`         | `O(n^2)`        | `O(n^2)`          | `O(1)` | Yes     | Yes       |
-|[Quicksort](./quicksort.js)    | `O(nlog(n))`   | `O(n^2)`        | `O(nlog(n))`      | `O(n)` | No      | Yes       |
+|                                     | Time best case | Time worst case | Time average case | Memory | Stable? | In place? |
+|-------------------------------------|----------------|-----------------|-------------------|--------|---------|-----------|
+|[Bubble sort](./bubble-sort.js)      | `O(n)`         | `O(n^2)`        | `O(n^2)`          | `O(1)` | Yes     | Yes       |
+|[Insertion sort](./insertion-sort.js)| `O(n)`         | `O(n^2)`        | `O(n^2)`          | `O(1)` | Yes     | Yes       |
+|[Merge sort](./merge-sort.js)        | `O(nlog(n))`   | `O(nlog(n))`    | `O(nlog(n))`      | `O(n)` | Yes     | No        |
+|[Quicksort](./quicksort.js)          | `O(nlog(n))`   | `O(n^2)`        | `O(nlog(n))`      | `O(n)` | No      | Yes       |
 
 ### Notes
 - *Stable* means that ordering of equal elements is always preserved. Not relevant when elements are just numbers.
