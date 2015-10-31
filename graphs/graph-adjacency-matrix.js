@@ -1,6 +1,6 @@
 function Graph (numVertices, directed) {
-  this.directed = directed || false;
   this.numVertices = numVertices;
+  this.directed = directed;
 
   this.adjMatrix = new Array(numVertices);
   for (var i = 0; i < numVertices; i++) {
@@ -10,23 +10,23 @@ function Graph (numVertices, directed) {
     }
   }
 }
- Graph.prototype.edgeExists = function (vertex1, vertex2) {
-   return this.adjMatrix[vertex1][vertex2] !== 0;
+ Graph.prototype.edgeExists = function (fromVertex, toVertex) {
+   return this.adjMatrix[fromVertex][toVertex] !== 0;
  };
 
- Graph.prototype.addEdge = function (vertex1, vertex2, weight) {
+ Graph.prototype.addEdge = function (fromVertex, toVertex, weight) {
    if (weight === undefined) { weight = 1; }
 
-   this.adjMatrix[vertex1][vertex2] = weight;
-   if (!directed) {
-     this.adjMatrix[vertex2][vertex1] = weight;
+   this.adjMatrix[fromVertex][toVertex] = weight;
+   if (!this.directed) {
+     this.adjMatrix[toVertex][fromVertex] = weight;
    }
  };
 
- Graph.prototype.removeEdge = function (vertex1, vertex2) {
-   this.adjMatrix[vertex1][vertex2] = 0;
-   if (!directed) {
-     this.adjMatrix[vertex2][vertex1] = 0;
+ Graph.prototype.removeEdge = function (fromVertex, toVertex) {
+   this.adjMatrix[fromVertex][toVertex] = 0;
+   if (!this.directed) {
+     this.adjMatrix[toVertex][fromVertex] = 0;
    }
  };
 
