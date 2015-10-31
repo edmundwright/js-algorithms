@@ -24,7 +24,7 @@ Graph.prototype.edgeExists = function (fromVertex, toVertex) {
   return false;
 };
 
-GraphNode.prototype.addEdge = function (fromVertex, toVertex, weight, directed) {
+Graph.prototype.addEdge = function (fromVertex, toVertex, weight, directed) {
   var edge = new Edge(toVertex, weight || 1);
   edge.next = this.edges[fromVertex];
   this.edges[fromVertex] = edge;
