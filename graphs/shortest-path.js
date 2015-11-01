@@ -1,7 +1,7 @@
 // Uses adjacency list representation found in file in same directory.
 // This BFS just finds the shortest path to a target vertex, ignoring edge weight.
 
-Graph.prototype.breadthFirstSearch = function (startVertex, targetVertex) {
+Graph.prototype.shortestPath = function (startVertex, targetVertex) {
   var parents = new Array(this.numVertices);
   var discovered = new Array(this.numVertices);
 
