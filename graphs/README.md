@@ -7,6 +7,10 @@
 
 ## Operations using breadth-first search
 
-- [Finding shortest path](./shortest-path.js)
-- [Counting components](./num-components.js)
-- [Checking if is bipartite](./is-bipartite.js)
+- [Finding shortest path](./bfs-shortest-path.js)
+- [Counting components](./bfs-num-components.js)
+- [Checking if is bipartite](./bfs-is-bipartite.js)
+
+## Operations using depth-first search
+
+- [Checking if is cyclic](./dfs-is-cyclic.js)

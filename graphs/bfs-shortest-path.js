@@ -18,7 +18,7 @@ Graph.prototype.shortestPath = function (startVertex, targetVertex) {
         discovered[edge.toVertex] = true;
         parents[edge.toVertex] = currentVertex;
         if (edge.toVertex === targetVertex) {
-          return this._path(startVertex, targetVertex, parents);
+          return Graph.findPath(startVertex, targetVertex, parents);
         }
       }
       edge = edge.next;
@@ -28,7 +28,7 @@ Graph.prototype.shortestPath = function (startVertex, targetVertex) {
   return false;
 };
 
-Graph.prototype._path = function (startVertex, targetVertex, parents) {
+Graph.findPath = function (startVertex, targetVertex, parents) {
   result = [];
   assemblePath(startVertex, targetVertex);
   return result;
