@@ -1,9 +1,13 @@
 # NP-complete problems
 
-*P*: Solvable in polynomial time.
-*NP*: Verifiable in polynomial time.
-*NP-hard*: Informally: at least as hard as the hardest problems in NP.
-*NP-complete*: In NP and in NP-hard. So is verifiable in polynomial time, but is at least as hard as hardest problems that can be solved in polynomial time.
+#### P
+Solvable in polynomial time.
+#### NP
+Verifiable in polynomial time.
+#### NP-hard
+Informally: at least as hard as the hardest problems in NP.
+#### NP-complete
+In NP and in NP-hard. So is verifiable in polynomial time, but is at least as hard as hardest problems that can be solved in polynomial time.
 
 ## Traveling Salesman
 
