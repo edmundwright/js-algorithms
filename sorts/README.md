@@ -5,8 +5,10 @@
 |[Bubble sort](./bubble-sort.js)      | `O(n)`         | `O(n^2)`        | `O(n^2)`          | `O(1)` | Yes     | Yes       |
 |[Insertion sort](./insertion-sort.js)| `O(n)`         | `O(n^2)`        | `O(n^2)`          | `O(1)` | Yes     | Yes       |
 |[Merge sort](./merge-sort.js)        | `O(nlog(n))`   | `O(nlog(n))`    | `O(nlog(n))`      | `O(n)` | Yes     | No        |
-|[Quicksort](./quicksort.js)          | `O(nlog(n))`   | `O(n^2)`        | `O(nlog(n))`      | `O(n)` | No      | Yes       |
+|[Quicksort](./quicksort.js)          | `O(nlog(n))`   | `O(n^2)`        | `O(nlog(n))`      | `O(n)`*| No      | Yes       |
+|[Heapsort](./heapsort.js)            | `O(nlog(n))`   | `O(nlog(n))`    | `O(nlog(n))`      | `O(n)`*| No      | No*       |
 
 ### Notes
 - *Stable* means that ordering of equal elements is always preserved. Not relevant when elements are just numbers.
 - Quicksort would use only `O(log(n))` memory if JS did tail call optimization.
+- Heapsort can be implemented in place, using `O(1)` memory.

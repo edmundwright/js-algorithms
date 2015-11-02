@@ -1,13 +1,14 @@
-function Heap (initialValues) {
-  if (initialValues === undefined) {
+// Note the Heap constructor mutates its input
+
+function Heap (contents) {
+  if (contents === undefined) {
     this.size = 0;
     this.contents = [];
     return;
   }
 
-  this.size = initialValues.length;
-  this.contents = new Array(this.size);
-  for (var i = 0; i < this.size; i++) { this.contents[i] = initialValues[i]; }
+  this.size = contents.length;
+  this.contents = contents;
 
   for (var i = this.size - 1; i >= 0; i--) {
     this._bubbleDown(i);
@@ -75,22 +76,22 @@ Heap.prototype._parent = function (idx) {
   if (idx === 0) {
     return -1;
   } else {
-    return Math.floor(idx / 2);
+    return Math.floor((idx - 1) / 2);
   }
 };
 
 Heap.prototype._left = function (idx) {
-  if (2 * idx >= this.size) {
-    return -1;
-  } else {
-    return 2 * idx;
-  }
-};
-
-Heap.prototype._right = function (idx) {
   if ((2 * idx) + 1 >= this.size) {
     return -1;
   } else {
     return (2 * idx) + 1;
+  }
+};
+
+Heap.prototype._right = function (idx) {
+  if ((2 * idx) + 2 >= this.size) {
+    return -1;
+  } else {
+    return (2 * idx) + 2;
   }
 };
