@@ -1,4 +1,4 @@
-# [(Binary Min) `Heap`](./heap.js)
+# [(Binary Min) Heap](./heap.js)
 
 ## Time complexity of operations
 
