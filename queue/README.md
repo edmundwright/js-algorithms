@@ -2,7 +2,7 @@
 
 ## Time complexity of operations
 
-All operations (`pop`, `push`, `peek` and `isEmpty`) are `O(1)`.
+All operations (`dequeue`, `enqueue`, `peek` and `isEmpty`) are `O(1)`.
 
 ## Memory
 
